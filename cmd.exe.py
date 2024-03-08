@@ -36,7 +36,7 @@ elif os.path.exists("C:/Users/"+ login +"/Downloads"):
  time.sleep(1)
  keyt.type("y")
  keyt.press(enter)
- #C:\Users\benle\AppData\Roaming\discord\app-1.0.9026
+ #C:\Users\[hidden]\AppData\Roaming\discord\app-1.0.9026
 else:
  print("system test complete")
  time.sleep(1)
