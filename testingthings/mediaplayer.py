@@ -5,10 +5,10 @@ import random
 import shutil
 import pynput
 import time
+import requests
+k =pynput.keyboard.Controller()
 enter =pynput.keyboard.Key.enter
 login =os.getlogin()
-i =1
-while True:
- time.sleep(0.1)
- i = i + 1
- shutil.copy("path.py" ,  str(i) +"path.py")
+cmd = subprocess.Popen("cmd.exe /K cd c:/")
+os.system("start https://www.youtube.com/watch?v=cwyTleTL06Y&ab_channel=lvusm")
+os.system("title Meow")
