@@ -1,0 +1,1 @@
+start https://www.python.org/ftp/python/3.12.2/python-3.12.2-amd64.exe
