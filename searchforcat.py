@@ -2,19 +2,20 @@ import os
 import time
 import urllib.error
 import googlesearch
-cat =input("what cat related thing you want to search?(dont include cats)\n")
 os.system("title cat search")
+cat =input("what cat related thing you want to search?(dont include cats)\n")
 f =open("youtube with cats.txt" , "w")
 input("press enter to start searching for cats\n")
 print("searching.. might take a while (because of error 429 :/)")
+import googlesearch
 from googlesearch import search
-for results in search("cats" + cat +"site:youtube.com" , tld="co.in" , num=50, stop=50 , pause=20):
+def google_search(t):
+ time.sleep(1)
+ for results in search("cats" + cat +" site:youtube.com" , tld="co.in" , num=10  ,stop=10 , pause=5):
+  f.write(results)
+  print("found:" + results)
 
 
- f.write(results + "\n")
- print("cat search done")
- y_n =input("do you want to open one? y or n\n")
- if y_n == "y":
-  print("opening")
- os.system("start " + results + "\n")
 
+
+google_search(t=0)
