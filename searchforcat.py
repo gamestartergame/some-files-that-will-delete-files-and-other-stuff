@@ -4,6 +4,7 @@ import urllib.error
 import googlesearch
 os.system("title cat search (made by gamestartergame)")
 print("github: https://github.com/gamestartergame")
+print("youtube: https://www.youtube.com/channel/UCk7nqcjq4od5hbf039Vn2QQ")
 website =input("what website do you want to search cats on (some websites might not work)\n")
 cat = input("cats:\n")
 f = open(website + " with cats.txt", "w")
