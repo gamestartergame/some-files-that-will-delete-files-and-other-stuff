@@ -2,7 +2,8 @@ import os
 import time
 import urllib.error
 import googlesearch
-os.system("title cat search (made by NO1)")
+os.system("title cat search (made by gamestartergame)")
+print("github: https://github.com/gamestartergame")
 website =input("what website do you want to search cats on (some websites might not work)\n")
 cat = input("cats:\n")
 f = open(website + " with cats.txt", "w")
