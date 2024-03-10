@@ -15,22 +15,23 @@ import googlesearch
 from googlesearch import search
 
 
-def google_search(t):
-    time.sleep(1)
-    print("searching.. might take a while (because of error 429 :/)")
-    print( "debug: "+ numofresults)
-    print(int(numofresults))
-    for results in search("cats" + cat + " site:" + website, tld="co.in", num=int(numofresults), stop=int(numofresults), pause=5):
-        f.write("found results with " +cat +"\n")
-        f.write(results + "\n")
-        print("found: " + results + "\n")
-time.sleep(1)
+def google_search(count):
+ time.sleep(1)
+ print("searching.. might take a while (because of error 429 :/)")
+ print( "debug: "+ numofresults)
+ print(int(numofresults))
+ for res in search("cats" + cat + " site:" + website, tld="co.in", num=int(numofresults), stop=int(numofresults), pause=5):
+  count = count + 1
+  f.write("found results with "+ cat +" result number: "+ str(count) +"\n")
+  f.write(res + "\n")
+  print("found: " + res +" "+ str(count) +"\n")
+ time.sleep(1)
 
-if int(numofresults) <= 100:
+if int(numofresults) <= 200:
 
- google_search(t=0)
+ google_search(count=0)
 
 else:
- print("can not find results higher than 100")
+ print("can not find results higher than 200")
 time.sleep(1)
 exit()
