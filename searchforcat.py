@@ -12,9 +12,10 @@ from googlesearch import search
 def google_search(t):
  time.sleep(1)
  for results in search("cats" + cat +" site:youtube.com" , tld="co.in" , num=10  ,stop=10 , pause=5):
-  f.write(results)
-  print("found:" + results)
-
+  f.write(results + "\n")
+  print("found: " + results + "\n")
+time.sleep(1)
+exit()
 
 
 
