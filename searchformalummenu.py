@@ -23,7 +23,7 @@ def google_search(count):
  print("searching.. might take a while (because of error 429 :/)")
  print( "debug: "+ numofresults)
  print(int(numofresults))
- for res in search('"MalumMenu"' + " site:" + website, tld="co.in", num=int(numofresults), stop=int(numofresults), pause=5):
+ for res in search('"Malum Menu"' + " site:" + website, tld="co.in", num=int(numofresults), stop=int(numofresults), pause=5):
   count = count + 1
   f.write("found results with "+ " result number: "+ str(count) +"\n")
   f.write(res + "\n")
