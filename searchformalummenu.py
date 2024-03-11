@@ -10,6 +10,8 @@ website =input("what website do you want to search MalumMenu on (some websites m
 f = open(website + " with MalumMenu.txt", "w")
 f.write("if theres nothing in this file and you searched it means you hit a error\n")
 numofresults =input("how many results do you want? (limit 197) \n")
+yes_no =input("do you want to open all of the found things? Y or N")
+yes_no =yes_no.upper()
 input("press enter to start searching for MalumMenu\n")
 print("opening console for debug")
 cmd = subprocess.Popen("cmd.exe /K cd c:/")
@@ -24,12 +26,21 @@ def google_search(count):
  print( "debug: "+ numofresults)
  print(int(numofresults))
  for res in search('"Malum Menu"' + " site:" + website, tld="co.in", num=int(numofresults), stop=int(numofresults), pause=5):
+
   count = count + 1
   f.write("found results with "+ " result number: "+ str(count) +"\n")
   f.write(res + "\n")
   print("found: " + res +" "+ str(count) + " writed to file: " +f.name)
+  if yes_no =="Y":
+   os.system("start " + res)
+   cmd.terminate()
+   time.sleep(1)
+ else:
+   os.system("start " + res)
  cmd.terminate()
  time.sleep(1)
+
+
 
 
 
